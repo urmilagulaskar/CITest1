@@ -26,3 +26,8 @@ jobs:
         id: hello
       - name: Echo the greeting's time
         run: echo 'The time was ${{ steps.hello.outputs.time }}'
+      - shell: bash
+        env:
+          key:  ${{ secrets.secret_key1 }}
+        run: |
+          example-command "$key"
