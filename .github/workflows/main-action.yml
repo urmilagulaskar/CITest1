@@ -30,4 +30,4 @@ jobs:
         env:
           key:  ${{ secrets.secret_key1 }}
         run: |
-          example-command "$key"
+          echo "$key"
