@@ -20,7 +20,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: get github run number
-        run: echo $GITHUB_RUN_NUMBER
+        run: |
+          echo $GITHUB_RUN_NUMBER
+          echo $GITHUB_SHA
         
       - name: Hello World
         uses: actions/hello-world-javascript-action/@v1
